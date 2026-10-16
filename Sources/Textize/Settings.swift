@@ -44,10 +44,12 @@ final class Settings: ObservableObject {
         }
     }
 
-    private let defaults = UserDefaults.standard
+    private let defaults: UserDefaults
     private let frameKey = "overlayFrame"
 
-    init() {
+    /// 테스트에서는 별도 suite의 UserDefaults를 넣어 실제 설정을 건드리지 않게 한다.
+    init(defaults: UserDefaults = .standard) {
+        self.defaults = defaults
         localeIdentifier = defaults.string(forKey: "localeIdentifier") ?? "ko-KR"
         let size = defaults.double(forKey: "fontSize")
         fontSize = size > 0 ? size : Self.defaultFontSize

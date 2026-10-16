@@ -11,6 +11,12 @@ let package = Package(
             path: "Sources/Textize",
             resources: [.process("Resources")],
             swiftSettings: [.swiftLanguageMode(.v5)]
+        ),
+        .testTarget(
+            name: "TextizeTests",
+            dependencies: ["Textize"],
+            path: "Tests/TextizeTests",
+            swiftSettings: [.swiftLanguageMode(.v5)]
         )
     ]
 )

@@ -24,6 +24,7 @@ macOS 26 or later. Xcode 26 or later (Swift 6) to build.
 ```sh
 ./scripts/make-dev-cert.sh   # once: local signing certificate
 make run                      # build → build/Textize.app → open
+make test                     # unit tests (swift test)
 ```
 
 On first launch, allow **System Audio Recording** when prompted. Always launch with `open` (or `make run`),

@@ -12,6 +12,8 @@ Build and run instructions are in the README; each file's role and pitfalls are 
 say -v Yuna "안녕하세요. 자막 테스트입니다."   # If captions appear, it works
 ```
 
+Unit tests live in `Tests/TextizeTests` (Swift Testing, `make test`). They cover the pure logic only: `CaptionModel`, `SentenceSplitter`, `Settings`, `MenuState`, and the string catalog (every `L()` key present in all 6 languages, no dead keys). Audio capture, recognition, translation and the overlay are verified by hand.
+
 ## Permissions (System Audio Recording)
 
 - Never run the binary directly from the terminal. The permission gets attached to the terminal. Always use `open build/Textize.app`.
