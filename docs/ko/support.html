@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Textize 지원</title>
+<meta name="description" content="Textize 도움말: 권한, 언어, 번역 언어 팩, 문제 신고 방법.">
+<link rel="icon" type="image/png" href="../assets/favicon.png">
+<link rel="stylesheet" href="../assets/style.css">
+<link rel="alternate" hreflang="en" href="https://paikwiki.github.io/textize/support.html">
+<link rel="alternate" hreflang="ko" href="https://paikwiki.github.io/textize/ko/support.html">
+</head>
+<body>
+<header class="top"><div class="wrap">
+  <a class="brand" href="./"><img src="../assets/icon.png" alt=""> Textize</a>
+  <nav>
+    <a href="./">소개</a>
+    <a href="support.html" aria-current="page">지원</a>
+    <a href="../support.html" lang="en">English</a>
+  </nav>
+</div></header>
+
+<main class="wrap doc">
+  <h1>지원</h1>
+
+  <h2>자주 묻는 질문</h2>
+  <dl class="faq">
+    <dt>앱은 켜지는데 자막이 안 나옵니다.</dt>
+    <dd><strong>시스템 설정 &gt; 개인정보 보호 및 보안 &gt; 화면 및 시스템 오디오 녹음(시스템 오디오 녹음만)</strong>에서 Textize를 허용한 뒤 메뉴 막대에서 자막을 다시 시작하세요. 메뉴의 음성 언어가 실제로 들리는 언어와 같은지도 확인하세요.</dd>
+
+    <dt>왜 시스템 오디오 녹음 권한을 요구하나요?</dt>
+    <dd>다른 앱이 내는 소리를 받으려면 macOS에서 이 권한이 필요합니다. 화면 녹화나 마이크 권한은 요구하지 않습니다.</dd>
+
+    <dt>마이크를 쓰나요?</dt>
+    <dd>아니요. 맥이 재생하는 소리에만 자막을 붙이고 주변 소리는 듣지 않습니다.</dd>
+
+    <dt>화상 통화 중에도 쓸 수 있나요?</dt>
+    <dd>네. 상대방 목소리는 맥이 재생하는 소리라서 다른 소리처럼 자막과 번역이 붙습니다. 내 목소리는 마이크로 들어가 네트워크로 나갈 뿐 맥에서 재생되지 않아 자막에 나오지 않습니다. 이어폰이나 AirPods를 써도 마찬가지입니다.</dd>
+
+    <dt>자막 생성이나 번역을 위해 데이터를 외부로 전송하나요?</dt>
+    <dd>아니요. 인식과 번역 모두 macOS 내장 기능으로 맥 안에서 처리하며 외부로 데이터를 전송하지 않습니다. 자세한 내용은 <a href="privacy.html">개인정보 처리방침</a>에 있습니다.</dd>
+
+    <dt>어떤 언어에 자막을 붙일 수 있나요?</dt>
+    <dd>macOS 내장 음성 인식이 지원하는 언어입니다. 목록은 <em>음성 언어</em> 메뉴에 있고, 언어를 처음 고르면 모델을 다운로드합니다. 음성 모델은 최대 5개 언어까지 저장할 수 있습니다.</dd>
+
+    <dt>'번역 준비' 창이 뜨고 번역이 시작되지 않습니다.</dt>
+    <dd>그 언어 조합의 번역 언어 팩을 처음 한 번 다운로드하는 중입니다. 시스템 대화상자가 뜨면 다운로드를 허용하세요. '이 언어 조합은 번역을 지원하지 않습니다.'라는 메시지가 나오면 macOS 번역 기능이 지원하지 않는 조합입니다.</dd>
+
+    <dt>자막이 늦거나, 긴 문장이 한참 뒤에 확정됩니다.</dt>
+    <dd>음성 인식은 말하는 사람이 쉴 때 문장을 확정합니다. 그 전까지는 임시 결과를 흐리게 보여 주고, 임시 결과 중 끝난 문장은 미리 번역합니다.</dd>
+
+    <dt>자막 창을 옮기거나 크기를 바꾸거나 숨기려면요?</dt>
+    <dd>자막 창 상단의 이동 버튼을 드래그해서 옮길 수 있고, 가장자리를 드래그해서 크기를 바꿀 수 있습니다. 창 숨기기와 보이기, 글자 크기, 배경 투명도, 자동 숨기기는 메뉴 막대에서 조절합니다. <em>자막 창 초기화</em>를 고르면 기본값으로 돌아갑니다.</dd>
+
+    <dt>자막 창이 사라졌습니다.</dt>
+    <dd>일정 시간 음성이 없으면 자동 숨기기가 창을 감출 수 있습니다. 음성이 시작되면 창이 다시 나타납니다. 필요한 경우, 메뉴 막대의 <em>자막 창 보기</em>로 활성화할 수 있습니다.</dd>
+  </dl>
+
+  <h2>문제 신고</h2>
+  <p><a href="https://github.com/paikwiki/textize/issues">GitHub Issues</a>에 올려 주세요. macOS 버전, 선택한 음성·번역 언어, 기대했던 동작을 함께 적어 주시면 좋습니다.</p>
+</main>
+
+<footer><div class="wrap">
+  <span>© 2026 paikwiki</span>
+  <span><a href="https://github.com/paikwiki/textize">소스 코드</a> · <a href="https://github.com/paikwiki/textize/blob/main/LICENSE">MIT 라이선스</a> · <a href="privacy.html">개인정보</a></span>
+</div></footer>
+</body>
+</html>

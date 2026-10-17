@@ -1,0 +1,104 @@
+:root {
+  --bg: #ffffff;
+  --fg: #1d1d1f;
+  --muted: #6e6e73;
+  --line: #e5e5ea;
+  --accent: #0a84ff;
+  --card: #f5f5f7;
+  --overlay-bg: rgba(20, 20, 24, 0.82);
+  --overlay-fg: #ffffff;
+  --overlay-dim: rgba(255, 255, 255, 0.55);
+  --max: 760px;
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #0f0f12;
+    --fg: #f5f5f7;
+    --muted: #98989d;
+    --line: #2c2c31;
+    --accent: #4ca3ff;
+    --card: #1b1b1f;
+  }
+}
+* { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; }
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--fg);
+  font: 17px/1.6 -apple-system, BlinkMacSystemFont, "SF Pro Text", "Helvetica Neue", "Apple SD Gothic Neo", "Noto Sans KR", "Hiragino Sans", sans-serif;
+}
+a { color: var(--accent); text-decoration: none; }
+a:hover { text-decoration: underline; }
+.wrap { max-width: var(--max); margin: 0 auto; padding: 0 16px; }
+
+header.top { border-bottom: 1px solid var(--line); }
+header.top .wrap {
+  display: flex; align-items: center; justify-content: space-between;
+  height: 56px; gap: 16px;
+}
+.brand { display: flex; align-items: center; gap: 10px; color: var(--fg); font-weight: 600; }
+.brand img { width: 28px; height: 28px; border-radius: 7px; }
+nav { display: flex; gap: 18px; font-size: 15px; }
+nav a { color: var(--muted); }
+nav a[aria-current="page"] { color: var(--fg); }
+
+.hero { padding: 56px 0 32px; text-align: center; }
+.hero img.icon { width: 112px; height: 112px; border-radius: 26px; box-shadow: 0 8px 24px rgba(0,0,0,0.15); }
+.hero h1 { font-size: 40px; line-height: 1.15; margin: 20px 0 8px; letter-spacing: -0.01em; }
+.hero p.tagline { font-size: 21px; color: var(--muted); margin: 0 0 24px; }
+.hero .cta { display: inline-flex; gap: 12px; flex-wrap: wrap; justify-content: center; }
+.btn {
+  display: inline-block; padding: 10px 18px; border-radius: 10px;
+  background: var(--accent); color: #fff; font-weight: 600; font-size: 15px;
+}
+.btn:hover { text-decoration: none; opacity: 0.9; }
+.btn.secondary { background: var(--card); color: var(--fg); border: 1px solid var(--line); }
+.note { font-size: 14px; color: var(--muted); margin-top: 12px; }
+
+/* 오버레이 자막 예시. 실제 스크린샷으로 바꾸기 전까지 쓰는 CSS 모형. */
+.demo {
+  position: relative; margin: 36px auto 0; max-width: 640px; aspect-ratio: 16 / 9;
+  border-radius: 14px; overflow: hidden;
+  background: linear-gradient(135deg, #2b3a67 0%, #5a3d7a 50%, #c06c84 100%);
+}
+.demo .label {
+  position: absolute; top: 12px; left: 14px; font-size: 12px; letter-spacing: 0.04em;
+  color: rgba(255,255,255,0.7); text-transform: uppercase;
+}
+.demo .overlay {
+  position: absolute; left: 50%; bottom: 7%; transform: translateX(-50%);
+  width: 88%; padding: 12px 18px; border-radius: 12px;
+  background: var(--overlay-bg); color: var(--overlay-fg);
+  text-align: left; font-size: clamp(13px, 2.6vw, 18px); line-height: 1.45;
+  backdrop-filter: blur(8px); -webkit-backdrop-filter: blur(8px);
+}
+.demo .overlay .t { color: var(--overlay-dim); font-size: 0.9em; }
+.demo .overlay .volatile { opacity: 0.6; }
+
+section { padding: 36px 0; border-top: 1px solid var(--line); }
+section h2 { font-size: 26px; margin: 0 0 16px; letter-spacing: -0.01em; }
+section h3 { font-size: 18px; margin: 24px 0 6px; }
+.features { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 14px; }
+.feature { background: var(--card); border-radius: 12px; padding: 16px 18px; }
+.feature strong { display: block; margin-bottom: 4px; }
+.feature p { margin: 0; color: var(--muted); font-size: 15px; }
+dl.faq dt { font-weight: 600; margin-top: 18px; }
+dl.faq dd { margin: 4px 0 0; color: var(--muted); }
+kbd, code {
+  font: 0.92em ui-monospace, "SF Mono", Menlo, monospace;
+  background: var(--card); padding: 1px 6px; border-radius: 5px;
+}
+.doc h1 { font-size: 34px; margin: 40px 0 6px; }
+.doc .meta { color: var(--muted); font-size: 15px; margin-bottom: 24px; }
+.doc h2 { font-size: 22px; margin: 28px 0 8px; }
+.doc ul { padding-left: 22px; }
+
+footer { border-top: 1px solid var(--line); padding: 28px 0 40px; color: var(--muted); font-size: 14px; }
+footer .wrap { display: flex; flex-wrap: wrap; gap: 8px 20px; justify-content: space-between; }
+
+@media (max-width: 480px) {
+  .hero h1 { font-size: 32px; }
+  .hero p.tagline { font-size: 18px; }
+  nav { gap: 12px; font-size: 14px; }
+}

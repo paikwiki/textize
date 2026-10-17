@@ -31,6 +31,15 @@ Unit tests live in `Tests/TextizeTests` (Swift Testing, `make test`). They cover
 - Terminology: captions = same-language text, subtitles = translated text. The menu says Captions because recognition is the default behavior.
 - App Store subtitle `Live captions & translation`, keywords `STT,speech to text,live captions,subtitles,transcription,translation,caption,overlay,accessibility`.
 
+## Website (`docs/`)
+
+`docs/` is the project website, served by GitHub Pages from `main` at `/docs`. Plain HTML, no build step: `index.html`, `support.html`, `privacy.html` in English and the same three under `ko/`. Edit both languages together. Preview with `python3 -m http.server` from inside `docs/`.
+
+- Writing rules for the site and README: no em or en dashes in prose, no "not X but Y" framing, no short fragment used as a closing line, no lists of three for rhythm. Full sentences with a subject; prefer active voice. Korean: avoid "A가 아니라 B" contrasts, keep sentence lengths varied, avoid passive endings like "~됩니다" where the actor is known.
+- Terms: "caption window" / "자막 창" (not overlay), "the speech recognition built into macOS" / "macOS 내장 음성 인식", "the translation feature built into macOS" / "macOS 내장 번역 기능". Menu names in italics must match `Localizable.xcstrings` exactly.
+- The hero overlay is a CSS mock on purpose. Real screenshots are impractical for a caption app, so do not replace it with one without asking.
+- The privacy page exists because App Store Connect requires a public privacy policy URL; it is linked from the footer only. The support page is in the nav.
+
 ## Next Up
 
 Saving caption history, keyboard shortcuts, display duration control, capturing only a specific app's audio. Forced sentence splitting during fast speech is on hold.

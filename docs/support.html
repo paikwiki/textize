@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Textize Support</title>
+<meta name="description" content="Help for Textize: permissions, languages, translation packs and how to report a problem.">
+<link rel="icon" type="image/png" href="assets/favicon.png">
+<link rel="stylesheet" href="assets/style.css">
+<link rel="alternate" hreflang="en" href="https://paikwiki.github.io/textize/support.html">
+<link rel="alternate" hreflang="ko" href="https://paikwiki.github.io/textize/ko/support.html">
+</head>
+<body>
+<header class="top"><div class="wrap">
+  <a class="brand" href="./"><img src="assets/icon.png" alt=""> Textize</a>
+  <nav>
+    <a href="./">Overview</a>
+    <a href="support.html" aria-current="page">Support</a>
+    <a href="ko/support.html" lang="ko">한국어</a>
+  </nav>
+</div></header>
+
+<main class="wrap doc">
+  <h1>Support</h1>
+
+  <h2>Frequently asked questions</h2>
+  <dl class="faq">
+    <dt>Textize starts but no captions appear.</dt>
+    <dd>Allow Textize under <strong>System Settings &gt; Privacy &amp; Security &gt; Screen &amp; System Audio Recording (System Audio Recording Only)</strong>, then start captions again from the menu bar. Also check that the speech language in the menu matches what is being spoken.</dd>
+
+    <dt>Why does it ask for System Audio Recording?</dt>
+    <dd>macOS requires this permission before an app can receive the sound other apps are playing. Textize does not ask for screen recording or the microphone.</dd>
+
+    <dt>Does Textize use the microphone?</dt>
+    <dd>No. It captions only the audio your Mac plays and does not pick up sound in the room.</dd>
+
+    <dt>Can I use it during a video call?</dt>
+    <dd>Yes. Your Mac plays the other participants' voices, so they are captioned and translated like any other audio. Your own voice goes into the microphone and out to the network without being played back, so it does not show up. Headphones and AirPods make no difference.</dd>
+
+    <dt>Does Textize send data anywhere for captions or translation?</dt>
+    <dd>No. Recognition and translation both run on your Mac with features built into macOS, and no data is sent anywhere. Details are in the <a href="privacy.html">privacy policy</a>.</dd>
+
+    <dt>Which languages can be captioned?</dt>
+    <dd>Any language the speech recognition built into macOS supports. The list is in the <em>Speech Language</em> menu, and the model is downloaded the first time you pick a language. Speech models can be stored for up to five languages.</dd>
+
+    <dt>A 'Preparing Translation' window appears and translation does not start.</dt>
+    <dd>The translation language pack for that language pair is being downloaded for the first time. If a system dialog appears, allow the download. If the message 'Translation is not supported for this language pair.' appears, the translation feature in macOS does not support that pair.</dd>
+
+    <dt>Captions are delayed, or a long sentence takes a while to settle.</dt>
+    <dd>Speech recognition finalizes a sentence when the speaker pauses. Until then Textize shows the provisional text dimmed and translates any finished sentences in it ahead of time.</dd>
+
+    <dt>How do I move, resize or hide the caption window?</dt>
+    <dd>Drag the move button at the top of the caption window to move it, and drag its edges to resize it. Hiding and showing the window, text size, background opacity and auto-hide are in the menu bar. <em>Reset Caption Window</em> restores the defaults.</dd>
+
+    <dt>The caption window disappeared.</dt>
+    <dd>Auto-hide may have hidden the window after a period with no speech. The window comes back when speech starts again. If needed, choose <em>Show Caption Window</em> in the menu bar to bring it back.</dd>
+  </dl>
+
+  <h2>Report a problem</h2>
+  <p>Open an issue on <a href="https://github.com/paikwiki/textize/issues">GitHub Issues</a>. Please include your macOS version, the speech and translation languages you selected, and what you expected to see.</p>
+</main>
+
+<footer><div class="wrap">
+  <span>© 2026 paikwiki</span>
+  <span><a href="https://github.com/paikwiki/textize">Source</a> · <a href="https://github.com/paikwiki/textize/blob/main/LICENSE">MIT License</a> · <a href="privacy.html">Privacy</a></span>
+</div></footer>
+</body>
+</html>

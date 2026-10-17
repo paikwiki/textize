@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Textize – Live captions &amp; translation for your Mac</title>
+<meta name="description" content="Textize turns any audio playing on your Mac into live captions and can translate them on device.">
+<link rel="icon" type="image/png" href="assets/favicon.png">
+<link rel="apple-touch-icon" href="assets/icon.png">
+<link rel="stylesheet" href="assets/style.css">
+<link rel="alternate" hreflang="en" href="https://paikwiki.github.io/textize/">
+<link rel="alternate" hreflang="ko" href="https://paikwiki.github.io/textize/ko/">
+<meta property="og:title" content="Textize – Live captions &amp; translation for your Mac">
+<meta property="og:description" content="Live captions and translation for any audio playing on your Mac, processed on device.">
+<meta property="og:image" content="https://paikwiki.github.io/textize/assets/icon.png">
+<meta property="og:type" content="website">
+</head>
+<body>
+<header class="top"><div class="wrap">
+  <a class="brand" href="./"><img src="assets/icon.png" alt=""> Textize</a>
+  <nav>
+    <a href="./" aria-current="page">Overview</a>
+    <a href="support.html">Support</a>
+    <a href="ko/" lang="ko">한국어</a>
+  </nav>
+</div></header>
+
+<main class="wrap">
+  <div class="hero">
+    <img class="icon" src="assets/icon.png" alt="Textize app icon">
+    <h1>Live captions &amp; translation<br>for your Mac</h1>
+    <p class="tagline">Turns any audio playing on your Mac into captions.</p>
+    <div class="cta">
+      <a class="btn" href="https://github.com/paikwiki/textize">View on GitHub</a>
+      <a class="btn secondary" href="support.html">Get help</a>
+    </div>
+    <p class="note">Requires macOS 26 or later.</p>
+
+    <div class="demo" aria-label="Illustration of the caption window">
+      <span class="label">Audio from any app</span>
+      <div class="overlay">
+        <div>Live captions appear here, sentence by sentence.</div>
+        <div class="t">자막은 여기에 문장 단위로 나타납니다.</div>
+        <div class="volatile">And the next sentence shows up while you are still</div>
+      </div>
+    </div>
+    <p class="note">The image above is an illustration.</p>
+  </div>
+
+  <section id="features">
+    <h2>What it does</h2>
+    <div class="features">
+      <div class="feature"><strong>Captions for any audio</strong><p>Set the speech language, and Textize picks that language out of whatever your Mac is playing and shows it as captions.</p></div>
+      <div class="feature"><strong>Everything on device</strong><p>Speech recognition and translation both run on Apple's built-in frameworks. Textize does not send data anywhere.</p></div>
+      <div class="feature"><strong>Live translation</strong><p>Choose original, original with translation, or translation only. You can also pick a single sentence to see its original or its translation.</p></div>
+      <div class="feature"><strong>Stays out of the way</strong><p>The caption window does not block clicks or scrolling in other windows. It can hide itself after a period with no speech.</p></div>
+      <div class="feature"><strong>Scroll back</strong><p>Scroll in the strip along the right edge to see earlier captions.</p></div>
+      <div class="feature"><strong>Six interface languages</strong><p>English, 한국어, 日本語, Español, Français, Deutsch.</p></div>
+    </div>
+  </section>
+
+  <section id="how">
+    <h2>How it works</h2>
+    <p>Textize takes the audio your Mac is playing through a Core Audio process tap and passes it to the speech recognition built into macOS. The recognized text goes into the caption window one sentence at a time. Processing uses only features built into macOS, with no data sent anywhere, and the only permission Textize asks for is <em>System Audio Recording</em>. Subtitles come from the translation feature built into macOS.</p>
+    <p>Speech models and translation language packs are downloaded the first time you use a language, and work without an internet connection. Speech models can be stored for up to five languages.</p>
+  </section>
+
+  <section id="requirements">
+    <h2>Requirements</h2>
+    <ul>
+      <li>macOS 26 or later</li>
+      <li>The System Audio Recording permission</li>
+      <li>A speech model for the language you want to caption</li>
+    </ul>
+  </section>
+</main>
+
+<footer><div class="wrap">
+  <span>© 2026 paikwiki</span>
+  <span><a href="https://github.com/paikwiki/textize">Source</a> · <a href="https://github.com/paikwiki/textize/blob/main/LICENSE">MIT License</a> · <a href="privacy.html">Privacy</a></span>
+</div></footer>
+</body>
+</html>
