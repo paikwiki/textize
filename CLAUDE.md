@@ -43,6 +43,7 @@ Unit tests live in `Tests/TextizeTests` (Swift Testing, `make test`). They cover
 - Terms: "caption window" / "자막 창" (not overlay), "the speech recognition built into macOS" / "macOS 내장 음성 인식", "the translation feature built into macOS" / "macOS 내장 번역 기능". Menu names in italics must match `Localizable.xcstrings` exactly.
 - The hero overlay is a CSS mock on purpose. Real screenshots are impractical for a caption app, so do not replace it with one without asking.
 - The privacy page exists because App Store Connect requires a public privacy policy URL; it is linked from the footer only. The support page is in the nav.
+- Analytics: every page loads the GoatCounter snippet (`paikwiki.goatcounter.com`, no cookies); download links carry `data-goatcounter-click="download-dmg"`. The privacy page describes the app only and does not mention site analytics on purpose. No other third-party script or image is allowed on the site.
 
 ## Next Up
 
