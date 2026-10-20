@@ -31,6 +31,10 @@ make test                     # unit tests (swift test)
 On first launch, allow System Audio Recording when macOS asks. Launch the app with `open` or `make run`.
 If you run the binary directly from a terminal, macOS grants the permission to the terminal instead of to Textize.
 
+## Release
+
+`make release` builds a notarized `dist/Textize-<version>.dmg`. It needs a Developer ID Application certificate in the keychain and notarization credentials stored once with `xcrun notarytool store-credentials textize-notary`. The script signs the app with the hardened runtime, notarizes and staples the app, then wraps it in a DMG and notarizes that too. See the comment at the top of `scripts/release.sh`.
+
 ## Website
 
 The `docs/` folder is the project website, served by GitHub Pages from the `main` branch. It is plain HTML

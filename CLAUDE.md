@@ -14,6 +14,10 @@ say -v Yuna "안녕하세요. 자막 테스트입니다."   # If captions appear
 
 Unit tests live in `Tests/TextizeTests` (Swift Testing, `make test`). They cover the pure logic only: `CaptionModel`, `SentenceSplitter`, `Settings`, `MenuState`, and the string catalog (every `L()` key present in all 6 languages, no dead keys). Audio capture, recognition, translation and the overlay are verified by hand.
 
+## Release
+
+`make release` (`scripts/release.sh`) produces `dist/Textize-<version>.dmg`: release build → Developer ID signature with hardened runtime → notarize and staple the app → DMG → sign, notarize and staple the DMG. The script picks the first "Developer ID Application" identity in the keychain and the `notarytool` keychain profile `textize-notary`; nothing secret lives in the repo. `SKIP_NOTARIZE=1` stops after the DMG for local checks. The process tap works under the hardened runtime without extra entitlements (verified 2026-10-20). Bump `CFBundleShortVersionString` and `CFBundleVersion` in `Resources/Info.plist` together before a release. The DMG goes to GitHub Releases; the site's download link will point at `releases/latest/download/`.
+
 ## Permissions (System Audio Recording)
 
 - Never run the binary directly from the terminal. The permission gets attached to the terminal. Always use `open build/Textize.app`.

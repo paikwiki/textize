@@ -1,7 +1,7 @@
 DEVELOPER_DIR ?= /Applications/Xcode.app/Contents/Developer
 export DEVELOPER_DIR
 
-.PHONY: build run debug test clean
+.PHONY: build run debug test clean release
 build:
 	./scripts/build-app.sh release
 debug:
@@ -13,3 +13,5 @@ test:
 	swift test
 clean:
 	rm -rf .build build
+release:
+	./scripts/release.sh
